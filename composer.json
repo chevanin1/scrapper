@@ -11,6 +11,8 @@
         "symfony/dotenv": "*",
         "symfony/flex": "^1.1",
         "symfony/framework-bundle": "*",
+        "symfony/http-client": "4.3.*",
+        "symfony/orm-pack": "^1.0",
         "symfony/yaml": "*"
     },
     "config": {
@@ -57,5 +59,8 @@
             "allow-contrib": false,
             "require": "4.3.*"
         }
+    },
+    "require-dev": {
+        "symfony/maker-bundle": "^1.11"
     }
 }
