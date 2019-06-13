@@ -75,7 +75,7 @@ class GetRepositoriesCommand extends Command
                         $repository->setFullName($item['full_name']);
                         $repository->setGithubId($item['id']);
                         $repository->setOwnerGithubId($item['owner']['id']);
-                        $repository->setOwnerGithubApiUrl($item['owner']['html_url']);
+                        $repository->setOwnerGithubApiUrl($item['owner']['url']);
                         $repository->setUrl($item['html_url']);
                         $repository->setLanguage($item['language']);
                         $repository->setScore($item['score']);
