@@ -57,9 +57,9 @@ class GithubRepository
     private $score;
 
     /**
-     * @ORM\Column(type="boolean")
+     * @ORM\ManyToOne(targetEntity="App\Entity\GithubOwner", inversedBy="repository")
      */
-    private $owner_loaded;
+    private $owner;
 
     public function getId(): ?int
     {
@@ -162,14 +162,14 @@ class GithubRepository
         return $this;
     }
 
-    public function getOwnerLoaded(): ?bool
+    public function getOwner(): ?GithubOwner
     {
-        return $this->owner_loaded;
+        return $this->owner;
     }
 
-    public function setOwnerLoaded(bool $owner_loaded): self
+    public function setOwner(?GithubOwner $owner): self
     {
-        $this->owner_loaded = $owner_loaded;
+        $this->owner = $owner;
 
         return $this;
     }
