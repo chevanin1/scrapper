@@ -79,7 +79,6 @@ class GetRepositoriesCommand extends Command
                         $repository->setUrl($item['html_url']);
                         $repository->setLanguage($item['language']);
                         $repository->setScore($item['score']);
-                        $repository->setOwnerLoaded(false);
 
                         $this->entityManager->persist($repository);
                     }
